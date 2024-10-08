@@ -56,14 +56,16 @@ carousel.addEventListener('mouseleave', startSlideShow);
 
 
 
-/* section_4 image slider */
-let scrollContainer = document.querySelectorAll(".project_box .project");
+/* section_4 product slider */
+let swiper = new Swiper(".project-container", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
-/* scrollContainer.addEventListener("wheel", (e) => {
-    e.preventDefault();
-    scrollContainer.scrollLeft += e.deltaY;
-    scrollContainer.computedStyleMap.scrollBehavior = "smooth";
-}); */
+
+
 
 /* section 7 */
 // Select all accordion headers
