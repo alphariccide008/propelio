@@ -263,8 +263,6 @@ header{
 }
 /* section 4*/
 .section_4{
-    width: 1440px;
-    height: 754px;
     display: grid;
     place-content: center;
     text-align: center;
@@ -355,6 +353,7 @@ header{
 .details{
     display: flex;
     justify-content: space-between; 
+    padding-bottom: 20px;
 }
 .details a{
     color: #FF7900;
@@ -710,4 +709,545 @@ padding: 2rem 6rem;
    /*  header, .section_1, .section_2, .section_3, .section_4, .section_5, .section_7, footer{
         width: 90rem;
     } */
-     
+
+
+
+
+
+
+/* Partners slider styles */
+
+
+.partners-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px; /*gap  between*/
+    /* width will be dynamically set in JS */
+}
+
+.partner-logo {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust width as needed */
+    height: 500px; /* Fixed height for logos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+
+
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(27, 120, 81, 0.8);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Back-to-top button styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+
+/* Keyframes for infinite scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move the track to the left by half its width */
+    }
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .partner-logo {
+        width: 100px; /* Adjust width for smaller screens */
+        height: 70px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+/* Testimonials Section */
+.testimonials-section {
+    position: relative;
+    background-image: linear-gradient(to bottom right, rgba(128, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('static/images/back2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    flex: 1 1 30%;
+    max-width: 350px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #e63946;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.testimonial-author {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonials-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-item {
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-item {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-author {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* Footer Section Styles */
+.footer-section {
+    background: linear-gradient(to right, rgba(91, 2, 2, 0.9), rgba(0, 0, 0, 0.8)), 
+    url('static/images/2.jpg') no-repeat center center/cover;
+    color: #fff;
+    background-attachment: fixed;
+    padding: 40px 0; /* Increased padding for more space */
+}
+
+.footer-logo {
+    width: 150px; /* Adjust width as needed */
+    margin-bottom: 20px; /* Space below logo */
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: left;
+}
+
+.footer-addresses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.list-inline{
+    margin:20px;
+}
+
+.address {
+    flex: 1;
+    text-align: left;
+    padding: 20px; /* Increased padding for better spacing */
+}
+
+.address strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-title::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.mail {
+    font-size: 0.875rem; 
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icon Styles */
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.socialContainer {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    border-radius: 50%;
+}
+
+.socialContainer:hover {
+    background-color: maroon;
+    transform: scale(1.2);
+}
+
+.socialSvg {
+    width: 16px;
+    height: 16px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .footer-section .col-md-3 {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+
+    .footer-addresses {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .address {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 20px; /* Maintain padding for better spacing */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .socialContainer {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socialSvg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-title {
+        text-align: center;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .linkfooter {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .list-inline {
+        text-align: center;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section {
+        padding: 30px 0; /* Adjusted padding for smaller devices */
+    }
+
+    .footer-addresses {
+        text-align: center !important;
+    }
+
+    .address {
+        padding: 15px 0;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .linkfooter {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .list-inline {
+        text-align: center;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .navbar-brand {
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
+    }
+    
+    .navbar.scrolled .navbar-brand{
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
+    }
+    
+    
+    
+    .logo{  
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-right: 60px;
+        
+    }
+}
+
+
+.back-to-top {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 6px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .back-to-top:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(247, 247, 247);
+    align-items: center;
+  }
+  
+  .back-to-top:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  .back-to-top::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: #333;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .back-to-top:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+
+  .btnway {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    align-items: center; /* Vertically center the button */
+    padding: 0; /* Optional: Adjust padding as needed */
+}
+  
+
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 40px; /* Smaller for mobile */
+        height: 40px;
+    }
+    .back-to-top:hover {
+        width: 100px; /* Smaller expand width on mobile */
+    }
+
+    
+  .btnway {
+    display: flex;
+    justify-content:  center; /* Align button to the right */
+    align-items: center; /* Vertically center the button */
+    padding: 0; /* Optional: Adjust padding as needed */
+}
+
+.navbar-brand {
+    width: 110px; /* Adjust width for mobile screens */
+    height: 40px;
+}
+
+.navbar.scrolled .navbar-brand{
+    width: 110px; /* Adjust width for mobile screens */
+    height: 40px;
+}
+
+
+
+.logo{  
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-right: 60px;
+    
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    .logo{  
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-right: 60px;
+
+    }
+
+
+
+    .navbar-brand {
+    display: block; /* Ensure the brand occupies space */
+    background: url("static/images/logo/samdus_white.png") no-repeat center center;
+    background-size: contain; /* Ensure the image fits within the set dimensions */
+    width: 150px; /* Set the width of the brand image */
+    height: 50px; /* Set an appropriate height */
+    text-indent: -9999px;
+    }
+
+
+    .navbar.scrolled .navbar-brand{
+    display: block; /* Ensure the brand occupies space */
+    background: url("static/images/logo/samdus\ trans.png") no-repeat center center;
+    background-size: contain; /* Ensure the image fits within the set dimensions */
+    width: 150px; /* Set the width of the brand image */
+    height: 50px; /* Set an appropriate height */
+    text-indent: -9999px;
+    }
